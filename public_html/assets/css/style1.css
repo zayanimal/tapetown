@@ -1,0 +1,552 @@
+body {
+    -webkit-text-stroke: 0.1px !important;
+    -webkit-font-smoothing: antialiased !important;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+/*    background-attachment: fixed;*/
+}
+
+a {
+    text-decoration: none;
+    color: #FDF5E6;
+}
+
+@font-face {
+    font-family: HelveticaNeue45; /* Гарнитура шрифта */
+    src: url(/assets/fonts/HelveticaNeue45.ttf); /* Путь к файлу со шрифтом */
+   }
+   
+@keyframes flashy {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*.tab {
+  overflow: hidden;
+ width: 300px;
+}
+
+ .tab span {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 24px;
+  font-color: #4d4d4d;
+  letter-spacing: 1.5px;  
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab span:hover {
+  color: #FDF5E6;
+}
+
+.tab span.active {
+  font-color: #fff;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}*/
+
+/* Мигание LIVE */
+.flash {
+   
+    animation-name: flashy;
+    animation-iteration-count: 8.75;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+/*  opacity: 0;*/
+
+}
+
+/* Еще один вариант */
+.flash2 {
+    
+    animation-name: flashy;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    }
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+    animation-play-state: paused !important;
+}
+
+
+#p_prldr{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    background: #000000;
+    z-index: 30;
+} 
+
+.contpre{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.svg_anm {
+    height: 12%;
+    width: auto;
+}
+
+
+
+.full-screen {
+/*	position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    background: #f00;
+    width: 90%;
+    height: 90%;
+    /*transform: scale(0.8);*/    
+}
+
+
+/* Время МСК */
+#cont2 {
+    color: #4d4d4d;
+    position: relative;
+    margin-top: 9px;
+    float: right; 
+    background: #000000;
+}
+
+/* Донат */
+.paybtn {
+    padding-left:110px;
+    font-size:20px;
+    margin-bottom:100px;
+}
+
+/* Внешка окна доната */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:150px;
+    left:0px;
+    background:rgba(0,0,0,0);
+}
+/* Нутро окна доната */
+.popup-inner {
+    width:423px;
+    height:218px;
+    
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+}
+
+/* iFrame Яндекса */
+.popup-inner iframe {
+    width:100%;
+    height:100%;
+}
+
+/* Кнопка Закрыть */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+
+/* Наводка на кнопку */
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+/* Лого ТТ */
+.logo img {
+    width: 270px;
+    height: 270px;
+    padding-bottom: 10px;
+}
+
+#btn {
+    padding-left: 9px;
+    pointer-events: auto;
+    cursor: pointer; 
+}
+
+/* Играет Сейчас */
+#now1 {
+    font-family: 'HelveticaNeue45';
+    color: #FDF5E6;
+    /*padding-top: 8px;*/
+}
+
+.left {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+
+.block_now {
+    width: 50%;
+    height: 50%;
+    background: #000000;
+/*    padding-top: 15px;
+    padding-left: 22px;
+    padding-right: 22px;*/
+    text-align: center;
+}
+
+.block_about {
+    width: 50%;
+    height: 50%;
+    background: #1A7F59;
+/*    padding-top: 15px;
+    padding-left: 22px;
+    padding-right: 22px;*/
+    text-align: center;
+}
+
+.block_upcoming {
+    width: 50%;
+    height: 100%;
+    background: #343DD1;
+/*    padding-top: 15px;
+    padding-left: 22px;
+    padding-right: 22px;*/
+    text-align: center;
+}
+
+.menu-items {
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 1.5px;
+    color: #4d4d4d;
+    display: inline-block;
+    font-size: 28px;
+    cursor: pointer;
+}
+.menu-items:hover {
+    color: #FDF5E6;
+}
+.menu-item-content {
+    font-family: 'HelveticaNeue45';
+    padding-top: 10px;
+    padding-right: 1px;
+    color: #FDF5E6;
+    font-size: 18px;
+    display: none;
+}
+.menu-item-content-about {
+    font-family: 'HelveticaNeue45';
+    text-align: justify;
+    width: 99%;
+    color: #FDF5E6;
+    font-size: 15px;
+}
+.menu-item-content-contact {
+    font-family: 'HelveticaNeue45';
+    text-align: left;
+    color: #FDF5E6;
+    font-size: 15px;
+}
+
+/* Социалки */
+.social-icons{
+    float: left;
+    padding-right: 15px;
+}
+
+/*Активная вкладка */
+.active {
+    color: #FDF5E6;
+}
+
+/* Три точки */
+.our-music {
+    width: auto;
+    height: 10px;
+    padding-top: 3px;
+  }
+
+/* Картинка в эбауте */
+.about-pic {
+    width: 320px;
+    height: 240px;
+}
+
+@media screen and (max-width: 1440px){
+    .container {
+        transform: scale(0.75);
+    }
+}
+
+/*iPad pro port*/
+@media screen and (width: 1024px) and (height: 1366px){
+    .container {
+        transform: scale(0.9);
+    }
+}
+/*iPad pro port*/
+@media screen and (width: 1366px) and (height: 1024px){
+    .container {
+        transform: scale(0.9);
+    }
+}
+/*iPad port*/
+@media screen and (width: 768px) and (height: 1024px){
+    .container {
+        transform: scale(0.8);
+    }
+}
+/*iPad land*/
+@media screen and (width: 1024px) and (height: 768px){
+    .container {
+        transform: scale(0.8);
+    }
+}
+@media screen and (max-width: 760px){
+    .full-screen {
+    height: 94.5%;
+    }
+    .menu-bar {
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    }
+    .logo img {
+    width: 200px;
+    height: 200px;
+    }
+    .popup {
+    transform: scale(0.75);
+    padding-left: 30px;
+    overflow:visible;
+    }
+    .about-pic {
+    width: 320px;
+    height: 225px;
+    }
+  
+}
+/*iPhone 6/7/8 plus port*/
+@media screen and (width: 414px) and (height: 736px){
+    .full-screen {
+        height: 113.3%;
+}
+    .container {
+        transform: scale(1.17);
+    }
+
+/*     #cont2 {
+        left: 97.9%;
+        top: 80.4%;   
+}*/
+}
+/*iPhone 6/7/8 plus land*/
+@media screen and (width: 736px) and (height: 414px){
+    .full-screen {
+        height: 205%;
+}
+    .container {
+        transform: scale(1.17);
+    }
+}
+
+/* iPhone 6/7/8 port*/
+
+@media screen and (width: 375px) and (height: 667px){
+    .full-screen {
+        height: 113.5%;
+}
+    .container {
+        transform: scale(1.064);
+    }
+
+/*     #cont2 {
+        left: 97.9%;
+        top: 80.4%;   
+}*/
+}
+
+/* iPhone 6/7/8 land*/
+
+@media screen and (width: 667px) and (height: 375px){
+    .full-screen {
+        height: 206%;
+}
+    .container {
+        transform: scale(1.064);
+    }
+
+
+}
+
+/* iPhone X port*/
+
+@media screen and (width: 375px) and (height: 812px){
+    .full-screen {
+        height: auto;
+}
+    .container {
+        transform: scale(1.064);
+    }
+
+/*     #cont2 {
+        left: 97.9%;
+        top: 80.4%;   
+}*/
+    
+}
+
+/* iPhone X land*/
+
+@media screen and (width: 812px) and (height: 375px){
+    .full-screen {
+        height: 231%;
+}
+    .container {
+        transform: scale(1.064);
+    }
+}
+
+/* iPhone 5/SE port*/
+
+@media screen and (max-width: 360px){
+   
+     .full-screen {
+        height: 94%;
+  }
+
+     .container {
+        transform: scale(0.6); 
+    }
+
+/*     #cont2 {
+        padding-bottom: 4px;
+}*/
+}
+
+
+
+
+/* iPhone 5/SE land*/
+
+@media screen and (width: 568px) and (height: 320px){
+    .full-screen {
+        height: 206%;
+}
+    .container {
+        transform: scale(0.905); 
+    }
+
+
+    
+    #cont2 {
+        margin-: 4px;*/
+    }
+
+
+}
+/*Pixel 2 port*/
+
+@media screen and (width: 411px) and (height: 731px){
+    .full-screen {
+        height: 114%;
+    }
+    .container {
+        transform: scale(1.17);
+    }
+
+ /*    #cont2 {
+        left: 97.9%;
+        top: 80.4%;   
+}*/
+/*Pixel 2XL port*/
+
+@media screen and (width: 411px) and (height: 823px){
+    .full-screen {
+        height: 101%;
+    }
+    .container {
+        transform: scale(1.17);
+    }
+}
+/*Galaxy S5 port*/
+
+@media screen and (width: 360px) and (height: 640px){
+    .full-screen {
+        height: 113.5%;
+    }
+    .container {
+        transform: scale(1.018);
+    }
+}
+
+/*mobile back*/
+
+@media only screen and (max-width: 760px) {   
+    body {
+    background-image: url(/assets/img/background_phone.png);
+    }
+    .svg_anm{
+        height: 15%;
+    }
+}
