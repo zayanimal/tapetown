@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["/*"],
+      "@base/*": ["base/*"],
+      "@images/*": ["assets/images/*"],
+      "@icons/*": ["assets/icons/*"],
+      "@modules/*": ["modules/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

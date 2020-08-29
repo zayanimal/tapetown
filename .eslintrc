@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "react-app",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "semi": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "none",
+        "singleQuote": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error",
+    "react/prop-types": "off",
+    "comma-dangle": "off",
+    "react/jsx-indent-props": ["error", 4]
+  }
+}

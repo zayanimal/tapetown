@@ -1,0 +1,17 @@
+const path = require('path');
+const { addWebpackAlias } = require('customize-cra'); // eslint-disable-line
+
+module.exports = function override(config) {
+  return {
+    ...config,
+    ...addWebpackAlias({
+      '@': path.resolve(__dirname, 'src'),
+      '@modules': path.resolve(__dirname, 'src', 'modules'),
+      '@base': path.resolve(__dirname, 'src', 'base'),
+      '@images': path.resolve(__dirname, 'src', 'assets/images'),
+      '@icons': path.resolve(__dirname, 'src', 'assets/icons'),
+      '@utils': path.resolve(__dirname, 'src', 'utils'),
+      '@styles': path.resolve(__dirname, 'src', 'styles')
+    })(config)
+  };
+};
