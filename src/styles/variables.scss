@@ -1,0 +1,14 @@
+:root {
+    /** Базовые настройки */
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.6em);
+
+    /** Цвета */
+    --color-body-bckg: #f63f3e;
+    --color-text: #333333;
+    --color-text-tv: #808080;
+
+    /** Размеры экрана */
+    --screen-md: 35em;
+    --screen-lg: 50em;
+}

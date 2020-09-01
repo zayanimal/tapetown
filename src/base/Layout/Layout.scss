@@ -1,6 +1,30 @@
 .Layout {
-    background-image: url('../../assets/images/background1.png');
+    background-image: url('../../assets/images/bckg_mobile.png');
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    height: 150vh;
+
+    @media (min-width: 35em) {
+        background-image: url('../../assets/images/bckg_desktop.png');
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.2em;
+
+        &-text {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        &-sub {
+            font-size: 1.3rem;
+            margin-left: 0.5em;
+        }
+
+        &_tv {
+            color: var(--color-text-tv);
+        }
+    }
 }
