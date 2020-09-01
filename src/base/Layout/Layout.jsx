@@ -11,7 +11,7 @@ export const Layout = () => (
                 TAPETOWN
             </div>
             <div className={cn('title-sub')}>
-                <div>RADIO</div>
+                <div>RADIOO</div>
                 <div className={cn('title_tv')}>TV</div>
             </div>
         </div>
