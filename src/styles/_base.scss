@@ -1,0 +1,18 @@
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.6em);
+
+    @include color-variables;
+    @include screen-variables;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-red);
+}

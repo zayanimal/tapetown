@@ -1,0 +1,7 @@
+@import "./variables";
+
+@function em($unit) {
+    $emSize: $unit / $default-font-size;
+
+    @return #{$emSize}em;
+}
