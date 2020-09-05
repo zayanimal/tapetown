@@ -1,11 +1,12 @@
 @import "@styles/_functions.scss";
+@import "@styles/_variables.scss";
 
 .Layout {
     background-image: url('../../assets/images/bckg_mobile.png');
     background-size: cover;
-    padding: 1.5em 1em;
+    padding: 1em;
 
-    @media (min-width: 35em) {
+    @media (min-width: $screen-md) {
         background-image: url('../../assets/images/bckg_desktop.png');
         background-size: 100%;
     }
@@ -15,7 +16,7 @@
         justify-content: center;
         align-items: center;
         font-family: Fjalla One;
-        text-shadow: em(0.8) em(0.8) var(--color-text-shadow);
+        text-shadow: em(0.8) em(0.8) em(0.5) var(--color-text-shadow);
         text-transform: uppercase;
 
         &-text {
@@ -29,17 +30,16 @@
         }
 
         &-sub {
-            font-size: 1.96rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 1.7rem;
             line-height: 1;
             margin-left: 0.1em;
 
-            @media (min-width: em(375)) {
-                font-size: 2.1rem;
+            &_tv {
+                color: var(--color-gray);
             }
-        }
-
-        &_tv {
-            color: var(--color-gray);
         }
     }
 }

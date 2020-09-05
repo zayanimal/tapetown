@@ -1,0 +1,34 @@
+.Player {
+    &__now {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+        text-shadow: em(0.8) em(0.8) em(0.5) var(--color-text-shadow);
+
+        span {
+            margin-top: 0.2em;
+        }
+    }
+
+    &__button {
+        padding: 0.8em;
+        margin-top: 0.6em;
+        width: 100%;
+        font-size: 2.2rem;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        text-shadow: em(0.8) em(0.8) var(--color-text-shadow);
+        border: none;
+
+        &:active {
+            background-color: var(--color-active-btn);
+            transform: translateY(0.1em);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+
+    }
+}

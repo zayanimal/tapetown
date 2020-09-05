@@ -1,9 +1,8 @@
 :root {
     box-sizing: border-box;
-    font-size: calc(1vw + 0.6em);
+    font-size: $default-font-size;
 
     @include color-variables;
-    @include screen-variables;
 }
 
 *,
@@ -14,5 +13,12 @@
 
 body {
     margin: 0;
+    font-family: Helvetica Neue;
     background-color: var(--color-red);
+}
+
+h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 0.2em 0;
 }

@@ -1,14 +1,3 @@
-@mixin color-variables {
-    --color-red: #F04239;
-    --color-white: #ffffff;
-    --color-text: #333333;
-    --color-text-shadow: #383838;
-    --color-gray: #808080;
-}
-
-@mixin screen-variables {
-    --screen-md: 35em;
-    --screen-lg: 50em;
-}
-
-$default-font-size: 16;
+$default-font-size: calc(1vw + 0.6em);
+$screen-md: 35em;
+$screen-iphone-6: em(375);
