@@ -2,12 +2,7 @@
     &__now {
         display: flex;
         flex-direction: column;
-        font-size: 1.4rem;
         text-shadow: em(0.8) em(0.8) em(0.5) var(--color-text-shadow);
-
-        span {
-            margin-top: 0.2em;
-        }
     }
 
     &__button {
@@ -19,6 +14,7 @@
         color: var(--color-white);
         text-shadow: em(0.8) em(0.8) var(--color-text-shadow);
         border: none;
+        user-select: none;
 
         &:active {
             background-color: var(--color-active-btn);

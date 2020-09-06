@@ -8,9 +8,7 @@ export const Player = () => {
     return (
         <div className={cn()}>
             <div className={`${cn('now')} col-5`}>
-                <span>
-                    K Lone - Dance of The vampires
-                </span>
+                <h5>K Lone - Dance of The vampires</h5>
             </div>
 
             <button className={cn('button')}>

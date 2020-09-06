@@ -14,12 +14,46 @@
 body {
     margin: 0;
     font-family: Helvetica Neue;
+    color: var(--color-black);
     background-color: var(--color-red);
 }
 
+@mixin headerFont {
+    margin: 0.1em 0;
+    font-weight: normal;
+
+    @media (min-width: em(375)) {
+        margin: 0.4em 0;
+    }
+}
+
+h1 {
+    @include headerFont;
+    font-size: 3.2rem;
+}
+
+h2 {
+    @include headerFont;
+    font-size: 2.5rem;
+}
+
 h3 {
+    @include headerFont;
+    font-size: 2rem;
+}
+
+h4 {
+    @include headerFont;
     font-size: 1.4rem;
     text-transform: uppercase;
-    margin: 0.2em 0;
-    font-weight: normal;
+}
+
+h5 {
+    @include headerFont;
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
 }
