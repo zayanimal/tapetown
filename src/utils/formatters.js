@@ -5,3 +5,5 @@ export const bem = (str, type = '__') => (el, modifier) => {
 
     return element;
 };
+
+export const classes = (...args) => args.join(' ');

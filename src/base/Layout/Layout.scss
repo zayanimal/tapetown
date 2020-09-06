@@ -48,6 +48,16 @@
         }
     }
 
+    &__upcoming {
+        &-header {
+            font-size: 2.5rem;
+        }
+
+        &-description {
+            font-size: 2rem;
+        }
+    }
+
     &__brand {
         display: flex;
         justify-content: space-between;

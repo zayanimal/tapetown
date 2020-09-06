@@ -1,5 +1,5 @@
 import React from 'react';
-import { bem } from '@utils/formatters';
+import { bem, classes } from '@utils/formatters';
 import { Player } from '@modules/Player';
 import tapetown from '@images/logo.png';
 import event1 from '@images/event_1.png';
@@ -28,28 +28,33 @@ export const Layout = () => (
             </div>
 
             {/* Воспроизведение */}
-            <div className="row">
+            <section className="row">
                 <h4>Now:</h4>
                 <Player />
-            </div>
+            </section>
 
             {/* Предстоящие выпуски */}
-            <div className="row">
+            <section className="row">
                 <h4>Upcoming:</h4>
 
                 <h1>Aug 12</h1>
-                <h2>Plotno Slozheno</h2>
-                <h3>w/ Endemic</h3>
-            </div>
+
+                <div className={cn('upcoming-header')}>
+                    <span>Plotno Slozheno</span>
+                </div>
+                <div className={cn('upcoming-description')}>
+                    <span>w/ Endemic</span>
+                </div>
+            </section>
 
             {/* Брэнд */}
-            <div className={`row ${cn('brand')}`}>
+            <section className={classes('row', cn('brand'))}>
                 <span>tapetown.live</span>
                 <img src={tapetown} alt="tapetown" />
-            </div>
+            </section>
 
             {/* Ссылки */}
-            <div className={`row ${cn('links')}`}>
+            <section className={classes('row', cn('links'))}>
                 <h4>Links:</h4>
 
                 <a href="/">Facebook</a>
@@ -57,11 +62,11 @@ export const Layout = () => (
                 <a href="/">Soundcloud</a>
                 <a href="/">Telegram</a>
                 <a href="/">Donate</a>
-            </div>
+            </section>
         </div>
 
         {/* О нас */}
-        <div className={`row ${cn('about')}`}>
+        <section className={classes('row', cn('about'))}>
             <h4>About:</h4>
 
             <span>
@@ -69,24 +74,24 @@ export const Layout = () => (
                 from small apartment in Kaliningrad City, occasionally streaming live mix
                 sessions, hosted by two aspiring music enthusiasts.
             </span>
-        </div>
+        </section>
 
         {/* Прошедшие мероприятия */}
-        <div className={`row ${cn('past')}`}>
+        <section className={classes('row', cn('past'))}>
             <h4>Past:</h4>
 
             <img className={cn('past-img')} src={event1} alt="event1"/>
             <img className={cn('past-img')} src={event2} alt="event2"/>
             <img className={cn('past-img')} src={event3} alt="event3"/>
             <img className={cn('past-img')} src={event4} alt="event4"/>
-        </div>
+        </section>
 
         {/* Горизонтальная линия */}
         <div className={cn('line')} />
 
         {/* Футер */}
-        <div className="row">
+        <section className="row">
             <img className={cn('footer')} src={footer} alt="footer"/>
-        </div>
+        </section>
     </div>
 );
