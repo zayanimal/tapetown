@@ -3,5 +3,5 @@
 }
 
 @for $i from 1 through 12 {
-    .col-#{$i} { width: $i * 10%; }
+    .col-#{$i} { width: 100 / 12 * $i * 1%; }
 }

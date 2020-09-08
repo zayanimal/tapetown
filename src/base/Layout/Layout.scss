@@ -4,6 +4,29 @@
 .Layout {
     padding: 1em;
 
+    &__container-1 {
+        padding: 1em 0;
+        display: grid;
+        grid-template-areas: "now"
+                             "upcoming"
+                             "brand"
+                             "links"
+                             "about";
+        grid-template-columns: 1fr;
+        grid-gap: 1.5em;
+        margin: 0 auto;
+
+        @media (min-width: $screen-md) {
+            padding-left: 6em;
+            padding-right: 6em;
+
+            grid-template-areas: "now upcoming"
+                                 "brand brand"
+                                 "links about";
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
     &__background {
         background-image: url('../../assets/images/bckg_mobile.png');
         background-size: cover;
@@ -13,10 +36,12 @@
         @media (min-width: $screen-md) {
             background-image: url('../../assets/images/bckg_desktop.png');
             background-size: 100%;
+            background-repeat: no-repeat;
         }
     }
 
     &__title {
+        grid-area: title;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,32 +73,57 @@
         }
     }
 
+    &__now {
+        grid-area: now;
+    }
+
     &__upcoming {
+        grid-area: upcoming;
+
         &-header {
             font-size: 2.5rem;
+
+            @media (min-width: $screen-md) {
+                font-size: 1.7rem;
+            }
         }
 
         &-description {
             font-size: 2rem;
+
+            @media (min-width: $screen-md) {
+                font-size: 1.3rem;
+            }
         }
     }
 
     &__brand {
+        grid-area: brand;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
 
     &__links {
+        grid-area: links;
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         cursor: pointer;
+
+        @media (min-width: $screen-md) {
+            font-size: 0.8rem;
+        }
     }
 
     &__about {
+        grid-area: about;
         font-size: 1.2rem;
+
+        @media (min-width: $screen-md) {
+            font-size: 0.8rem;
+        }
     }
 
     &__past {
@@ -89,11 +139,15 @@
 
     &__line {
         width: 90%;
-        margin: auto;
+        margin: 1.2em auto;
         border-bottom: 1px solid var(--color-line);
     }
 
     &__footer {
-        width: 100%;
+        grid-area: footer;
+
+        &-img {
+            width: 100%;
+        }
     }
 }
