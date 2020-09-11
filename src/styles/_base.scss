@@ -14,8 +14,8 @@
 body {
     margin: 0;
     font-family: Helvetica Neue;
-    color: var(--color-black);
-    background-color: var(--color-red);
+    color: var(--color-text);
+    background-color: var(--color-black);
 }
 
 @mixin headerFont {
@@ -67,5 +67,5 @@ h5 {
 
 a {
     text-decoration: none;
-    color: var(--color-black);
+    color: var(--color-text);
 }

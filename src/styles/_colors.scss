@@ -1,9 +1,9 @@
 @mixin color-variables {
     --color-red: #F04239;
-    --color-white: #ffffff;
+    --color-white: hsl(0, 0%, 90%);
     --color-black: #000000;
-    --color-text: #333333;
-    --color-text-shadow: #383838;
+    --color-text: #0e0e0e;
+    --color-text-shadow: #333333;
     --color-gray: #808080;
     --color-active-btn: #1b1b1b;
     --color-line: #0000004d;

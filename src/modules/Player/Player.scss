@@ -17,10 +17,14 @@
         text-shadow: em(0.8) em(0.8) var(--color-text-shadow);
         border: none;
         user-select: none;
+        cursor: pointer;
 
         &:active {
-            background-color: var(--color-active-btn);
             transform: translateY(0.1em);
+        }
+
+        &:hover {
+            background-color: var(--color-active-btn);
         }
 
         &:focus {
