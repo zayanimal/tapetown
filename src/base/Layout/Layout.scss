@@ -1,6 +1,21 @@
 @import "@styles/_functions.scss";
 @import "@styles/_variables.scss";
 
+.fonts-failed {
+    .Layout {
+        &__title {
+            &-text {
+                font-size: 3rem;
+            }
+
+            &-sub {
+                font-size: 1.1rem;
+                line-height: 1.08;
+            }
+        }
+    }
+}
+
 .Layout {
     padding: 1em;
 
@@ -13,7 +28,7 @@
                              "links"
                              "about";
         grid-template-columns: 1fr;
-        grid-gap: 1.5em;
+        gap: 1.5em;
         margin: 0 auto;
 
         @media (min-width: $screen-md) {
@@ -45,12 +60,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: Fjalla One;
+        font-family: Fjalla One, sans-serif;
         text-shadow: em(0.9) em(0.9) em(1.5) var(--color-text-shadow);
         text-transform: uppercase;
 
         &-text {
-            height: 0.9em;
             line-height: 1;
             font-size: 4.4rem;
 
@@ -60,11 +74,8 @@
         }
 
         &-sub {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             font-size: 1.7rem;
-            line-height: 1.08;
+            line-height: 1.1;
             margin-left: 0.1em;
 
             &_tv {

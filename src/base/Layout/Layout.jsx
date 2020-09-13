@@ -11,9 +11,11 @@ import './Layout.scss';
 
 const cn = bem('Layout');
 
-export const Layout = () => {
+export const Layout = (props) => {
+    const { fontFailCls } = props;
+
     return (
-        <div className={cn()}>
+        <div className={classes(cn(), fontFailCls)}>
             <div className={cn('background')}>
                 <div className="row">
                     <div className={cn('title')}>
@@ -21,8 +23,8 @@ export const Layout = () => {
                             Tapetown
                         </div>
                         <div className={cn('title-sub')}>
-                            <span>Radio</span>
-                            <span className={cn('title-sub_tv')}>Tv</span>
+                            <div>Radio</div>
+                            <div className={cn('title-sub_tv')}>Tv</div>
                         </div>
                     </div>
                 </div>
