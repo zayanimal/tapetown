@@ -28,8 +28,8 @@ export const App = () => {
         /** очистка памяти */
         analyzeColor.destroy();
 
-        Promise.all([helvetica.load(null, 1000), fjalla.load(null, 1000)])
-            .catch(() => { setFontFail('fonts-failed'); });
+        Promise.all([helvetica.load(null, 500), fjalla.load(null, 500)])
+            .catch(() => { setFontFail('Layout__title_fail'); });
     }, [analyzeColor, helvetica, fjalla, setFontFail]);
 
     return <Layout fontFailCls={fontFail} />;

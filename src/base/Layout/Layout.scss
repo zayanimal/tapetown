@@ -56,6 +56,7 @@
     }
 
     &__title {
+        $title: &;
         grid-area: title;
         display: flex;
         justify-content: center;
@@ -80,6 +81,17 @@
 
             &_tv {
                 color: var(--color-gray);
+            }
+        }
+
+        &_fail {
+            #{$title}-text {
+                font-size: 3rem;
+            }
+
+            #{$title}-sub {
+                font-size: 1.1rem;
+                line-height: 1.08;
             }
         }
     }
