@@ -21,8 +21,8 @@
         margin: 0 auto;
 
         @media (min-width: $screen-md) {
-            padding-left: 6em;
-            padding-right: 6em;
+            padding-left: 11.7em;
+            padding-right: 11.7em;
             row-gap: .8em;
             column-gap: 1.5em;
 
@@ -49,17 +49,17 @@
 
     &__title {
         $title: &;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        padding: 1em 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: Fjalla One, sans-serif;
+        font-family: Helvetica Neue, sans-serif;
         text-shadow: em(0.9) em(0.9) em(1.5) var(--color-text-shadow);
         text-transform: uppercase;
 
         @media (min-width: $screen-md) {
             padding-top: 2em;
+            padding-bottom: 0;
         }
 
         &-text {
