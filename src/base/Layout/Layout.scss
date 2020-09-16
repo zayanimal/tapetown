@@ -23,7 +23,7 @@
         @media (min-width: $screen-md) {
             padding-left: 11.7em;
             padding-right: 11.7em;
-            row-gap: .8em;
+            row-gap: .4em;
             column-gap: 1.5em;
 
             grid-template-areas: "now upcoming"
@@ -58,13 +58,14 @@
         text-transform: uppercase;
 
         @media (min-width: $screen-md) {
-            padding-top: 2em;
+            padding-top: 3em;
             padding-bottom: 0;
         }
 
         &-text {
             line-height: 1;
-            font-size: 4.4rem;
+            font-size: 3.8rem;
+            letter-spacing: -0.02em;
 
             @media (min-width: em(375)) {
                 font-size: 5rem;
@@ -72,12 +73,17 @@
         }
 
         &-sub {
-            font-size: 1.7rem;
-            line-height: 1.1;
+            font-size: 1.5rem;
+            line-height: 1;
             margin-left: 0.1em;
+            margin-top: -0.4em;
 
             &_tv {
                 color: var(--color-gray);
+            }
+
+            @media (min-width: $screen-md) {
+                font-size: 1.7rem;
             }
         }
 
@@ -104,7 +110,7 @@
             font-size: 2.5rem;
 
             @media (min-width: $screen-md) {
-                font-size: 1.7rem;
+                font-size: 2rem;
             }
         }
 
