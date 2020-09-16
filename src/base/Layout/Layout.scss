@@ -1,25 +1,14 @@
 @import "@styles/_functions.scss";
 @import "@styles/_variables.scss";
 
-.fonts-failed {
-    .Layout {
-        &__title {
-            &-text {
-                font-size: 3rem;
-            }
-
-            &-sub {
-                font-size: 1.1rem;
-                line-height: 1.08;
-            }
-        }
-    }
-}
-
 .Layout {
     padding: 1em;
 
-    &__container-1 {
+    @media (min-width: $screen-md) {
+        padding-top: 0;
+    }
+
+    &__container {
         padding: 1em 0;
         display: grid;
         grid-template-areas: "now"
@@ -34,10 +23,12 @@
         @media (min-width: $screen-md) {
             padding-left: 6em;
             padding-right: 6em;
+            row-gap: .8em;
+            column-gap: 1.5em;
 
             grid-template-areas: "now upcoming"
-                                 "brand brand"
-                                 "links about";
+                                 "about empty"
+                                 "links brand";
             grid-template-columns: 1fr 1fr;
         }
     }
@@ -49,6 +40,7 @@
         padding: 1em;
 
         @media (min-width: $screen-md) {
+            height: 100vh;
             background-image: url('../../assets/images/bckg_desktop.png');
             background-size: 100%;
             background-repeat: no-repeat;
@@ -57,13 +49,18 @@
 
     &__title {
         $title: &;
-        grid-area: title;
+        padding-top: 1em;
+        padding-bottom: 1em;
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: Fjalla One, sans-serif;
         text-shadow: em(0.9) em(0.9) em(1.5) var(--color-text-shadow);
         text-transform: uppercase;
+
+        @media (min-width: $screen-md) {
+            padding-top: 2em;
+        }
 
         &-text {
             line-height: 1;

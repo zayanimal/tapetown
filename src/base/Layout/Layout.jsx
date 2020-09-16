@@ -17,18 +17,16 @@ export const Layout = (props) => {
     return (
         <div className={classes(cn(), fontFailCls)}>
             <div className={cn('background')}>
-                <div className="row">
-                    <div className={cn('title')}>
-                        <div className={cn('title-text')}>
-                            Tapetown
-                        </div>
-                        <div className={cn('title-sub')}>
-                            <div>Radio</div>
-                            <div className={cn('title-sub_tv')}>Tv</div>
-                        </div>
+                <div className={cn('title')}>
+                    <div className={cn('title-text')}>
+                        Tapetown
+                    </div>
+                    <div className={cn('title-sub')}>
+                        <div>Radio</div>
+                        <div className={cn('title-sub_tv')}>Tv</div>
                     </div>
                 </div>
-                <div className={cn('container-1')}>
+                <div className={cn('container')}>
                     {/* Воспроизведение */}
                     <section className={cn('now')}>
                         <h4>Now:</h4>

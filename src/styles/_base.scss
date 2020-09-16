@@ -3,6 +3,10 @@
     font-size: $default-font-size;
 
     @include color-variables;
+
+    @media (min-width: $screen-md) {
+        font-size: $desktop-font-size;
+    }
 }
 
 *,
