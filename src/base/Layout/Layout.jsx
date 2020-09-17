@@ -59,7 +59,7 @@ export const Layout = (props) => {
                         <h4>Links:</h4>
 
                         {content.links.map(({ text, link }) => (
-                            <a href={link}>{text}</a>
+                            <a key={text} href={link}>{text}</a>
                         ))}
                     </section>
 
