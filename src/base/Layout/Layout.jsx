@@ -23,7 +23,7 @@ export const Layout = (props) => {
                     </div>
                     <div className={cn('title-sub')}>
                         <div>Radio</div>
-                        <div className={cn('title-sub_tv')}>Tv</div>
+                        <div>Tv</div>
                     </div>
                 </div>
                 <div className={cn('container')}>

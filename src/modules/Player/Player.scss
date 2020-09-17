@@ -20,10 +20,6 @@
         user-select: none;
         cursor: pointer;
 
-        &:active {
-            transform: translateY(0.1em);
-        }
-
         &:hover {
             background-color: var(--color-active-btn);
         }

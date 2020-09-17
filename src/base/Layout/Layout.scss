@@ -21,8 +21,8 @@
         margin: 0 auto;
 
         @media (min-width: $screen-md) {
-            padding-left: 11.7em;
-            padding-right: 11.7em;
+            padding-left: 13.5em;
+            padding-right: 13.5em;
             row-gap: .4em;
             column-gap: 1.5em;
 
@@ -58,32 +58,38 @@
         text-transform: uppercase;
 
         @media (min-width: $screen-md) {
-            padding-top: 3em;
+            padding-top: 4em;
             padding-bottom: 0;
         }
 
         &-text {
             line-height: 1;
-            font-size: 3.8rem;
+            font-size: 3.4rem;
             letter-spacing: -0.02em;
 
-            @media (min-width: em(375)) {
+            @media (min-width: $screen-iphone-6) {
+                font-size: 3.8rem;
+            }
+
+            @media (min-width: $screen-md) {
                 font-size: 5rem;
             }
         }
 
         &-sub {
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             line-height: 1;
             margin-left: 0.1em;
-            margin-top: -0.4em;
+            margin-top: -0.3em;
 
-            &_tv {
-                color: var(--color-gray);
+            @media (min-width: $screen-iphone-6) {
+                margin-top: -0.498em;
+                font-size: 1.56rem;
             }
 
             @media (min-width: $screen-md) {
-                font-size: 1.7rem;
+                margin-top: -0.4em;
+                font-size: 2.08rem;
             }
         }
 
@@ -110,6 +116,7 @@
             font-size: 2.5rem;
 
             @media (min-width: $screen-md) {
+                margin-top: 1em;
                 font-size: 2rem;
             }
         }
@@ -135,21 +142,11 @@
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
-        font-size: 1.2rem;
         cursor: pointer;
-
-        @media (min-width: $screen-md) {
-            font-size: 0.8rem;
-        }
     }
 
     &__about {
         grid-area: about;
-        font-size: 1.2rem;
-
-        @media (min-width: $screen-md) {
-            font-size: 0.8rem;
-        }
     }
 
     &__past {
