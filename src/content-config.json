@@ -1,0 +1,31 @@
+{
+    "upcoming": {
+        "date": "Aug 12",
+        "title": "Plotno Slozheno",
+        "author": "w/ Endemic"
+    },
+    "about": "is an independent, DIY internet radio station broadcasting 24/7 from small apartment in Kaliningrad City, occasionally streaming live mix sessions, hosted by two aspiring music enthusiasts.",
+    "links": [
+        {
+            "text": "facebook",
+            "link": "/"
+        },
+        {
+            "text": "instagram",
+            "link": "/"
+        },
+        {
+            "text": "soundcloud",
+            "link": "/"
+        },
+        {
+            "text": "telegram",
+            "link": "/"
+        },
+        {
+            "text": "donate",
+            "link": "/"
+        }
+    ],
+    "brand": "tapetown.live"
+}

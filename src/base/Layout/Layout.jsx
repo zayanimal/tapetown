@@ -7,6 +7,7 @@ import event2 from '@images/event_2.png';
 import event3 from '@images/event_3.png';
 import event4 from '@images/event_4.png';
 import footer from '@images/footer.png';
+import content from '@/content-config.json';
 import './Layout.scss';
 
 const cn = bem('Layout');
@@ -40,16 +41,16 @@ export const Layout = (props) => {
                         <h1>Aug 12</h1>
 
                         <div className={cn('upcoming-header')}>
-                            <span>Plotno Slozheno</span>
+                            <span>{content.upcoming.title}</span>
                         </div>
                         <div className={cn('upcoming-description')}>
-                            <span>w/ Endemic</span>
+                            <span>{content.upcoming.author}</span>
                         </div>
                     </section>
 
                     {/* Брэнд */}
                     <section className={cn('brand')}>
-                        <span>tapetown.live</span>
+                        <span>{content.brand}</span>
                         <img src={tapetown} alt="tapetown" />
                     </section>
 
@@ -57,22 +58,16 @@ export const Layout = (props) => {
                     <section className={cn('links')}>
                         <h4>Links:</h4>
 
-                        <a href="/">Facebook</a>
-                        <a href="/">Instagram</a>
-                        <a href="/">Soundcloud</a>
-                        <a href="/">Telegram</a>
-                        <a href="/">Donate</a>
+                        {content.links.map(({ text, link }) => (
+                            <a href={link}>{text}</a>
+                        ))}
                     </section>
 
                     {/* О нас */}
                     <section className={cn('about')}>
                         <h4>About:</h4>
 
-                        <span>
-                            is an independent, DIY internet radio station broadcasting 24/7
-                            from small apartment in Kaliningrad City, occasionally streaming live mix
-                            sessions, hosted by two aspiring music enthusiasts.
-                        </span>
+                        <span>{content.about}</span>
                     </section>
                 </div>
             </div>
