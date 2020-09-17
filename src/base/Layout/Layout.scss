@@ -41,7 +41,7 @@
 
         @media (min-width: $screen-md) {
             height: 100vh;
-            background-image: url('../../assets/images/bckg_desktop.png');
+            background-image: url('../../assets/images/bckg_desktop.svg');
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -150,6 +150,10 @@
     }
 
     &__past {
+        @media (min-width: $screen-md) {
+            margin-top: 1em;
+        }
+
         &-title {
             @media (min-width: $screen-md) {
                 text-align: center;
