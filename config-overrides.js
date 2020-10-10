@@ -5,6 +5,7 @@ module.exports = function override(config) {
   return addWebpackAlias({
       '@': path.resolve(__dirname, 'src'),
       '@modules': path.resolve(__dirname, 'src', 'modules'),
+      '@services': path.resolve(__dirname, 'src', 'services'),
       '@base': path.resolve(__dirname, 'src', 'base'),
       '@images': path.resolve(__dirname, 'src', 'assets/images'),
       '@icons': path.resolve(__dirname, 'src', 'assets/icons'),

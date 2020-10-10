@@ -9,6 +9,7 @@
       "@icons/*": ["assets/icons/*"],
       "@fonts/*": ["assets/fonts/*"],
       "@modules/*": ["modules/*"],
+      "@services/*": ["services/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"]
     }
