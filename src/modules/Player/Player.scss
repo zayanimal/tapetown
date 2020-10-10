@@ -7,6 +7,10 @@
         text-shadow: em(0.8) em(0.8) em(0.5) var(--color-text-shadow);
     }
 
+    &__text {
+        min-height: 2.2em;
+    }
+
     &__button {
         padding: 0.9em;
         margin-top: 0.6em;

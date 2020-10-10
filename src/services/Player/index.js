@@ -1,12 +1,10 @@
-import { STREAM_URL } from './constants';
+import NchanSubscriber from 'nchan';
+import { STREAM_URL, META_URL } from './constants';
 
 class PlayerService {
-    constructor(url) {
-        this.audio = new Audio(url);
-    }
-
-    getState = () => {
-        return this.audio.paused;
+    constructor(streamUrl, metaUrl) {
+        this.audio = new Audio(streamUrl);
+        this.meta = new NchanSubscriber(metaUrl);
     }
 
     toggle = () => {
@@ -16,4 +14,4 @@ class PlayerService {
     }
 }
 
-export const playerService = new PlayerService(STREAM_URL);
+export const playerService = new PlayerService(STREAM_URL, META_URL);
