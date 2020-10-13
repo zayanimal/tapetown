@@ -1,7 +1,7 @@
 import React from 'react';
 import { bem, classes } from '@utils/formatters';
 import { Player } from '@modules/Player';
-import tapetown from '@images/logo.png';
+import tapetown from '@images/logo.svg';
 import event1 from '@images/event_1.png';
 import event2 from '@images/event_2.png';
 import event3 from '@images/event_3.png';

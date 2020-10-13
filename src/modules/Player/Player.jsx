@@ -28,7 +28,7 @@ export class Player extends Component {
             } else if (this.state.nowPlaying !== now_playing.song.text) {
                 this.setState((state) => ({
                     ...state,
-                    nowPlaying: now_playing.song.text
+                    nowPlaying: now_playing.song.text.split(' - ').join('\n')
                 }));
             }
         });
@@ -50,7 +50,7 @@ export class Player extends Component {
     render() {
         return (
             <div className={cn()}>
-                <div className={`${cn('now')} col-5`}>
+                <div className={cn('now')}>
                     <span className={cn('text')}>{this.state.nowPlaying}</span>
                 </div>
 
