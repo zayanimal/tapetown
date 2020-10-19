@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { playerService } from '@services/Player';
+import { playerService } from '@services/player.service';
 import { bem } from '@utils/formatters';
 import './Player.scss';
 
@@ -8,7 +8,6 @@ const cn = bem('Player');
 export class Player extends Component {
     constructor(props) {
         super(props);
-        this.audio = playerService;
         this.state = {
             isPlaying: false,
             nowPlaying: '...'
@@ -16,8 +15,8 @@ export class Player extends Component {
     }
 
     componentDidMount() {
-        this.audio.meta.start();
-        this.audio.meta.on('message', (message) => {
+        playerService.textStream.start();
+        playerService.textStream.on('message', (message) => {
             const { now_playing, live } = JSON.parse(message);
 
             if (live.is_live) {
@@ -35,7 +34,7 @@ export class Player extends Component {
     }
 
     componentWillUnmount() {
-        this.audio.meta.stop();
+        playerService.textStream.stop();
     }
 
     onClick = () => {
@@ -44,7 +43,7 @@ export class Player extends Component {
             isPlaying: !state.isPlaying
         }));
 
-        return this.audio.toggle();
+        return playerService.toggleStream();
     }
 
     render() {

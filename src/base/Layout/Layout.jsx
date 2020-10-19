@@ -1,11 +1,8 @@
 import React from 'react';
 import { bem, classes } from '@utils/formatters';
 import { Player } from '@modules/Player';
+import { PastEvents } from '@modules/PastEvents';
 import tapetown from '@images/logo.svg';
-import event1 from '@images/event_1.png';
-import event2 from '@images/event_2.png';
-import event3 from '@images/event_3.png';
-import event4 from '@images/event_4.png';
 import footer from '@images/footer.png';
 import content from '@/content-config.json';
 import './Layout.scss';
@@ -73,19 +70,7 @@ export const Layout = (props) => {
             </div>
 
             {/* Прошедшие мероприятия */}
-            <section className={classes('row', cn('past'))}>
-                <h4 className={cn('past-title')}>Past:</h4>
-                <div className={cn('past-list')}>
-                    <img className={cn('past-img')} src={event1} alt="event1"/>
-                    <img className={cn('past-img')} src={event2} alt="event2"/>
-                    <img className={cn('past-img')} src={event3} alt="event3"/>
-                    <img className={cn('past-img')} src={event4} alt="event4"/>
-                    <img className={cn('past-img')} src={event1} alt="event1"/>
-                    <img className={cn('past-img')} src={event2} alt="event2"/>
-                    <img className={cn('past-img')} src={event3} alt="event3"/>
-                    <img className={cn('past-img')} src={event4} alt="event4"/>
-                </div>
-            </section>
+            <PastEvents />
 
             {/* Футер */}
             <section className={cn('footer')}>

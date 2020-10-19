@@ -149,43 +149,6 @@
         grid-area: about;
     }
 
-    &__past {
-        @media (min-width: $screen-md) {
-            margin-top: 1em;
-        }
-
-        &-title {
-            @media (min-width: $screen-md) {
-                text-align: center;
-                margin: 1em 0;
-            }
-        }
-
-        &-list {
-            @media (min-width: $screen-md) {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-                grid-auto-rows: 1fr;
-                grid-gap: 1em;
-                grid-auto-flow: dense;
-                padding: 0 2em;
-            }
-        }
-
-        &-img {
-            width: 100%;
-            height: auto;
-        }
-
-        &-img + &-img {
-            margin-top: 1em;
-
-            @media (min-width: $screen-md) {
-                margin-top: 0;
-            }
-        }
-    }
-
     &__line {
         width: 90%;
         margin: 1.2em auto;
